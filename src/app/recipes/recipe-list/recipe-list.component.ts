@@ -14,7 +14,7 @@ recipes: Recipe[];
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
-    this.recipes = this.recipeService.getRecipe();
+    this.recipes = this.recipeService.getRecipes();
     console.log(this.recipes);
   }
   onRecipeSelectedOnList(recipe: Recipe) {

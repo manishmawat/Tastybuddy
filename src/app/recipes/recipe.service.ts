@@ -17,9 +17,12 @@ export class RecipeService {
         [new Ingredient('Nector', 2),
          new Ingredient('Lemon', 3)])
       ];
-      getRecipe() {
-          console.log(this.recipes);
+      getRecipes() {
           return this.recipes.slice();
+      }
+
+      getRecipe(index: number) {
+          return this.recipes[index];
       }
 
       constructor(private shoppinglistService: ShoppingListService) {}
