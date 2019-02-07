@@ -39,8 +39,12 @@
             <a class="nav-link" href="#" (click)="SelectedFeature('shopping-list')">Shopping List</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Manage</a>
-            <div class="dropdown-menu">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" 
+            href="#" role="button" 
+            aria-haspopup="true" 
+            aria-expanded="false" appDropDown #r="appDropDown">
+                Manage</a>
+            <div class="dropdown-menu" [ngClass]="{'show':r.isOpen}">
               <a class="dropdown-item" href="#">Save Data</a>
               <a class="dropdown-item" href="#">Fetch Data</a>
               <!-- <div role="separator" class="dropdown-divider"></div>
